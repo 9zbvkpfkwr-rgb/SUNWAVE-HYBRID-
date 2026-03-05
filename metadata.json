@@ -1,0 +1,7 @@
+{
+  "name": "SUNWAVE HYBRID - Solaire Intelligent",
+  "description": "Solution énergétique hybride solaire avec Batteries Lithium pour la Côte d'Ivoire. Réduisez vos factures de 40% avec notre Plan Énergie Flexible.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>SUNWAVE HYBRID | Énergie Solaire Intelligente en Afrique de l'Ouest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              container: {
+                center: true,
+                padding: {
+                  DEFAULT: '1rem',
+                  sm: '2rem',
+                  lg: '4rem',
+                },
+              },
+              colors: {
+                brand: {
+                  orange: '#F37021',
+                  yellow: '#FFCB05',
+                  blue: '#00AEEF',
+                  green: '#00A651',
+                }
+              },
+              fontSize: {
+                'fluid-h1': 'clamp(2.5rem, 8vw, 5rem)',
+                'fluid-h2': 'clamp(1.75rem, 5vw, 3.5rem)',
+                'fluid-p': 'clamp(0.875rem, 2vw, 1.125rem)',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        :root { scroll-padding-top: 80px; }
+        body { 
+          padding-top: 96px;
+          font-family: 'Poppins', sans-serif; 
+          overflow-x: hidden;
+          background-color: #f8fafc;
+          -webkit-tap-highlight-color: transparent;
+          overscroll-behavior-y: none;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Correction radicale du zoom mobile iOS lors du focus sur les inputs */
+        input, textarea, select {
+            font-size: 16px !important; /* Force 16px pour éviter le zoom iOS */
+            line-height: normal;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        @media (min-width: 768px) {
+            input, textarea, select { font-size: 14px !important; }
+        }
+
+        /* Styles pour le rendu Markdown dans le chat */
+        .prose-chat strong { font-weight: 800; color: inherit; }
+        .prose-chat ul { list-style-type: disc; margin-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
+        .prose-chat li { margin-bottom: 0.25rem; }
+        .prose-chat p { margin-bottom: 0.5rem; }
+        .prose-chat p:last-child { margin-bottom: 0; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .mb-safe { margin-bottom: env(safe-area-inset-bottom); }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        
+        /* Fluidity improvements */
+        .transition-all {
+          transition-duration: 300ms !important;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        
+        .animate-in {
+          animation-duration: 500ms;
+          animation-fill-mode: both;
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        /* Personnalisation de la barre de défilement pour desktop */
+        @media (min-width: 1024px) {
+          ::-webkit-scrollbar { width: 8px; }
+          ::-webkit-scrollbar-track { background: transparent; }
+          ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+          .dark ::-webkit-scrollbar-thumb { background: #1e293b; }
+        }
+
+        .overflow-y-auto::-webkit-scrollbar { width: 4px; }
+        .overflow-y-auto::-webkit-scrollbar-track { background: transparent; }
+        .overflow-y-auto::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 999px; }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+        "recharts": "https://esm.sh/recharts@^3.7.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+        "marked": "https://esm.sh/marked@^12.0.0"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 transition-colors duration-500 selection:bg-emerald-100 selection:text-emerald-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
